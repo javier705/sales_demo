@@ -117,7 +117,7 @@ edited_data = st.data_editor(
     editor_df,
     column_config={
         'Metric': st.column_config.TextColumn('Metric', width=150, disabled=True),
-        **{week: st.column_config.NumberColumn(week, format="%d", disabled=(i==0)) 
+        **{week: st.column_config.NumberColumn(week, format="accounting", disabled=(i==0)) 
            for i, week in enumerate(['Metric'] + list(weeks)) if week != 'Metric'}
     },
     hide_index=True,
